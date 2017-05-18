@@ -1,0 +1,72 @@
+
+// custom styles
+
+body {
+	background: #efefef;
+}
+
+#app-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.chat-window {
+	height: 80%;
+	margin: 0 auto;
+	.window-controls {
+    	width: 100%;
+    	height: 20px;
+    	border-top-left-radius: 7px;
+    	border-top-right-radius: 7px;
+    	background-color: #cccccc;
+    }
+	.chat-container {
+		background-color: #ffffff;
+		height: 100%;
+		.row {
+			height: 100%;
+			[class*='col-']{
+				height: 100%;
+			}
+		}
+	}
+	.chat-list {
+		height: 100%;
+		list-style: none;
+		border-right: 1px solid #cccccc;
+		li {
+			padding: 20px 10px;
+			border-bottom: 1px solid #cccccc;
+		}
+		li:last-child {
+			border-bottom: 0px;
+		}
+	}
+	.chat-box {
+		height: 100%;
+		padding: 20px;
+		.row {
+			height: 100%;
+			[class*='col-']{
+				height: 100%;
+			}
+		}
+		.chat-form {
+			position: absolute;
+			bottom: 20px;
+			height: auto;
+			width: 100%;
+		}
+		.chat-message {
+			height: auto;
+			span {
+				background: #4286f4;
+				color: #ffffff;
+				padding: 4px 8px;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
