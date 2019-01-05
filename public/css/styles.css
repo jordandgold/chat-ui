@@ -5788,11 +5788,12 @@ body {
 #app-container {
   position: absolute;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  display: flex; }
 
 .chat-window {
   height: 80%;
-  margin: 0 auto; }
+  margin: auto; }
   .chat-window .window-controls {
     width: 100%;
     height: 20px;
