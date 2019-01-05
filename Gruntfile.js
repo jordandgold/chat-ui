@@ -4,14 +4,14 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'src/stylesheets/styles.css' : 'src/scss/styles.scss'
+					'src/css/styles.css' : 'src/scss/styles.scss'
 				}
 			}
 		},
 		autoprefixer:{
 			dist:{
 				files:{
-					'src/stylesheets/styles.css' : 'src/scss/styles.scss'
+					'src/css/styles.css' : 'src/scss/styles.scss'
 				}
 			},
 			options: {
