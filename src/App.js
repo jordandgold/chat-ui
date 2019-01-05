@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './stylesheets/styles.css';
+import './css/styles.css';
 
 class ChatApp extends Component {
   render() {
