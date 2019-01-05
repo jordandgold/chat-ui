@@ -7208,30 +7208,57 @@ body.has-open-nav {
     display: block; }
 
 body {
-  background: #efefef; }
+  background: #f3f3f7; }
 
 #app-container {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex; }
+  display: flex;
+  padding: 24px; }
+  @media (min-width: 900px) {
+    #app-container {
+      padding: 72px; } }
 
 .chat-app {
   height: 100%;
-  display: flex; }
+  display: flex;
+  background: #ffffff;
+  width: 100%; }
 
 .chat-window {
   flex-direction: column;
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .chat-window__messages {
-    flex: 1; }
+    flex: 1;
+    padding: 48px 32px; }
   .chat-window__message {
     height: auto; }
     .chat-window__message span {
-      background: #4286f4;
       color: #ffffff;
       padding: 4px 8px;
       display: inline-block;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      max-width: 500px; }
+    .chat-window__message.user-0 span {
+      background: #4286f4; }
+    .chat-window__message.user-1 {
+      text-align: right; }
+      .chat-window__message.user-1 span {
+        background: #28b774;
+        margin-left: auto; }
+
+.chat-form {
+  padding: 24px 32px;
+  border-top: 1px solid #eaeaef; }
+  .chat-form form {
+    display: flex; }
+    .chat-form form .ter-input {
+      flex: 1; }
+      .chat-form form .ter-input input {
+        border: 0px; }
+        .chat-form form .ter-input input:focus {
+          box-shadow: none; }
 
 /*# sourceMappingURL=styles.css.map */

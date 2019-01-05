@@ -8,8 +8,8 @@ class Window extends Component {
     super();
     this.state = {
       messages: [
-        { id: 1, body: 'Hello! Thank you for contacting customer service.' },
-        { id: 2, body: 'How can we help you today?' }
+        { id: 1, user: 0, body: 'Hello! Thank you for contacting customer service.' },
+        { id: 2, user: 0, body: 'How can we help you today?' }
       ]
     };
   }
@@ -32,6 +32,7 @@ class Window extends Component {
     return this.state.messages.map((message) => {
       return (<Message
                 key={message.id}
+                user={message.user}
                 body={message.body} />);
     });
   }
@@ -39,6 +40,7 @@ class Window extends Component {
   _addMessage(messageBody) {
     let message = {
       body: messageBody,
+      user: 1,
       id: Math.floor(Math.random() * (9999)),
     };
     this.setState({

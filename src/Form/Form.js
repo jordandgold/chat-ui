@@ -5,8 +5,11 @@ class Form extends Component {
     return (
       <div className="chat-form">
         <form onSubmit={this._handleSubmit.bind(this)}>
-          <input className="ter-input" type="text" ref={input => this._body = input} />
-          <button className="ter-button ter-button--primary" type="submit">Submit</button>
+          <div className="ter-input">
+            <div className="ter-input__wrap">
+              <input type="text" placeholder="Begin typing your message..." ref={input => this._body = input} />
+            </div>
+          </div>
         </form>
       </div>
     );
