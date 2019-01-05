@@ -1,0 +1,73 @@
+/**
+ * Terra Design System
+ * _tree-menu.scss
+ */
+
+.ter-tree-menu {
+	&__list {
+		margin: 0;
+		padding: 0 0 0 spacing('xxs');
+		list-style: none;
+		ul {
+			padding: 0;
+		}
+	}
+	&__list-item {
+		@include type-setting();
+		font-size: $tree-menu-font-size;
+		position: relative;
+		padding: 0 0 0 spacing('xxs');
+		a,
+		a:visited,
+		a:active,
+		a:focus {
+			color: $tree-menu-link-color;
+			text-decoration: none;
+			&:hover {
+				color: $tree-menu-link-hover;
+				cursor: pointer;
+			}
+		}
+		&.is-active {
+			> a {
+				color: $tree-menu-link-hover;
+			}
+		}
+		> a {
+			@include border-radius('all','small');
+			padding: spacing('micro') 0;
+			display: block;
+		}
+		> span {
+			padding: spacing('micro') 0;
+		}
+		&.is-expandable {
+			&:before {
+				@include icon-base();
+				content: "\f054";
+				color: lighten($tree-menu-link-color, 10%);
+				position: absolute;
+				top: 1em;
+				left: calc(-1 * #{spacing('xxs')});
+				transition: transform 200ms ease-in-out;
+				font-size: 75%;
+			}
+			> ul {
+				display: none;
+			}
+			&.is-expanded {
+				> a {
+					color: $tree-menu-link-hover;
+				}
+				&:before {
+					transform: rotate(90deg);
+				}
+			}
+		}
+		&.is-expandable.is-expanded {
+			> ul {
+				display: block;
+			}
+		}
+	}
+}
