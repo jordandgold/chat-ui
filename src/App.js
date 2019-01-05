@@ -5,9 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="chat-app">
-        <div className="chat-app__container">
-          <Window />
-        </div>
+        <Window />
       </div>
     );
   }

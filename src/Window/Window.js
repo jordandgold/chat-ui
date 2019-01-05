@@ -17,9 +17,13 @@ class Window extends Component {
   render() {
     const messages = this._getMessages();
     return (
-      <div className="chat-box">
-        {messages}
-        <Form addMessage={this._addMessage.bind(this)} />
+      <div className="chat-window">
+        <div className="chat-window__messages">
+          {messages}
+        </div>
+        <div className="chat-window__form">
+          <Form addMessage={this._addMessage.bind(this)} />
+        </div>
       </div>
     );
   }
