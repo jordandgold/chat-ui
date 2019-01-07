@@ -7224,7 +7224,8 @@ body {
   height: 100%;
   display: flex;
   background: #ffffff;
-  width: 100%; }
+  width: 100%;
+  border-radius: 0.25rem; }
 
 .chat-window {
   flex-direction: column;
@@ -7232,15 +7233,17 @@ body {
   width: 100%; }
   .chat-window__messages {
     flex: 1;
-    padding: 48px 32px; }
+    padding: 48px 32px;
+    overflow: scroll; }
   .chat-window__message {
     height: auto; }
     .chat-window__message span {
       color: #ffffff;
-      padding: 4px 8px;
+      padding: 8px 16px;
       display: inline-block;
-      margin-bottom: 5px;
-      max-width: 500px; }
+      margin-bottom: 12px;
+      max-width: 500px;
+      border-radius: 1em; }
     .chat-window__message.user-0 span {
       background: #4286f4; }
     .chat-window__message.user-1 {

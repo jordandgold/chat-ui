@@ -21,6 +21,7 @@ body {
 	display: flex;
 	background: color('white');
 	width: 100%;
+	border-radius: border-radius('md');
 }
 
 .chat-window {
@@ -30,15 +31,17 @@ body {
 	&__messages {
 		flex: 1;
 		padding: spacing('lg') spacing('md');
+		overflow: scroll;
 	}
 	&__message {
 		height: auto;
 		span {
 			color: #ffffff;
-			padding: 4px 8px;
+			padding: spacing('mini') spacing('xs');
 			display: inline-block;
-			margin-bottom: 5px;
+			margin-bottom: spacing('xxs');
 			max-width: 500px;
+			border-radius: 1em;
 		}
 		&.user-0 {
 			span {
