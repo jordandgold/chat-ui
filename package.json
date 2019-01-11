@@ -4,8 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-simple-chatbot": "^0.4.2"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
