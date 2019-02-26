@@ -1,0 +1,50 @@
+.ter-card {
+    background: $card-bg;
+    position: relative;
+    border-width: $card-border-width;
+    border-style: solid;
+    border-color: $card-border-color;
+    border-radius: $card-border-radius;
+    &[href] {
+    	display: block;
+    }
+	&__body {
+		display: block;
+		padding: spacing('md');
+	}
+	&__title {
+		display: block;
+		@include heading-5();
+	}
+	&__image {
+		display: block;
+		overflow: hidden;
+		&--top {
+			@include border-radius('top-left','none');
+			@include border-radius('top-right','none');
+			max-width: 100%;
+		}
+		&--left {
+			@include border-radius('top-left','none');
+			@include border-radius('bottom-left','none');
+			max-width: 100%;
+		}
+		> img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.is-inverse & {
+		*:not(a):not(.link) {
+			color: type-color('normal') !important;
+		}
+		a, .link {
+			color: $link-color;
+			text-decoration: none;
+			&:hover {
+				color: $link-hover-color;
+				text-decoration: none;
+			}
+		}
+	}
+}
